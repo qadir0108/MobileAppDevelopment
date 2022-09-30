@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DashboardActivity" />
+        <service android:name=".MyService" />
     </application>
 
 </manifest>
