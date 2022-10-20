@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -55,14 +57,14 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         super.onOptionsItemSelected(item);
 
         switch(item.getItemId()) {
-            case R.id.item1:Bundle dataBundle = new Bundle();
+            case R.id.item1:
+
+                Bundle dataBundle = new Bundle();
                 dataBundle.putInt("id", 0);
 
                 Intent intent = new Intent(getApplicationContext(),DisplayContact.class);
@@ -80,5 +82,9 @@ public class MainActivity extends AppCompatActivity {
             moveTaskToBack(true);
         }
         return super.onKeyDown(keycode, event);
+    }
+
+    public void Save(View view) {
+        Log.d("bsit", "Hello");
     }
 }

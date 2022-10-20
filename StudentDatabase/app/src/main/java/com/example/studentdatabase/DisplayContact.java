@@ -29,7 +29,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DisplayContact extends Activity {
+public class DisplayContact extends AppCompatActivity {
     int from_Where_I_Am_Coming = 0;
     private DBHelper mydb ;
 
@@ -46,8 +46,8 @@ public class DisplayContact extends Activity {
         setContentView(R.layout.activity_display_contact);
         name = (TextView) findViewById(R.id.editTextName);
         phone = (TextView) findViewById(R.id.editTextPhone);
-        email = (TextView) findViewById(R.id.editTextStreet);
-        street = (TextView) findViewById(R.id.editTextEmail);
+        email = (TextView) findViewById(R.id.editTextEmail);
+        street = (TextView) findViewById(R.id.editTextStreet);
         place = (TextView) findViewById(R.id.editTextCity);
 
         mydb = new DBHelper(this);
