@@ -18,6 +18,4 @@ For students to understand Mobile App Development
 - Database Design, Project Domain Model Classes
 - Entity Framework - Code First https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx
 - ASPNET Core Web API https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio
-- Generating QR Code https://www.freecodecamp.org/news/how-to-easily-implement-qrcoder-in-asp-net-core-using-c-10c4aa857e84/          
-- Generating QR Code ZXing NET https://www.yogihosting.com/aspnet-core-zxing-net/
-- https://www.yogihosting.com/aspnet-core-zxing-net/
+- Generating QR Code https://www.freecodecamp.org/news/how-to-easily-implement-qrcoder-in-asp-net-core-using-c-10c4aa857e84/ ZXing NET https://www.yogihosting.com/aspnet-core-zxing-net/
