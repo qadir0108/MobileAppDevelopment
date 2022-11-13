@@ -13,8 +13,8 @@ https://developer.android.com/guide
 - Chapter # 7 - Activities
 - Chapter # 8 - Services https://codeunplug.com/android-service-sample-code-for-playing-default-ringtone/
 - Chapter # 9 - Broadcast Recievers https://www.geeksforgeeks.org/broadcast-receiver-in-android-with-example/
-- Chapter # 68 - SQLite Database : https://www.tutorialspoint.com/android/android_sqlite_database.htm
-- Chapter # 11 - Fragments
+- Chapter # 68 - SQLite Database https://www.tutorialspoint.com/android/android_sqlite_database.htm
+- Chapter # 11 - Fragments https://www.javatpoint.com/android-fragments
 - Chapter # 12 - Intents & Filters
 - Chapter # 13 - UI Layouts
 - Chapter # 14 - UI Controls : Radio Buttons https://github.com/TahirAbbas876/Quiz-using-RadioButton
