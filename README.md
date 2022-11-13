@@ -12,7 +12,7 @@ https://developer.android.com/guide
 - Chapter # 5 - Hello World!
 - Chapter # 7 - Activities
 - Chapter # 8 - Services https://codeunplug.com/android-service-sample-code-for-playing-default-ringtone/
-- Chapter # 9 - Broadcast Recievers https://developer.android.com/guide/components/broadcasts https://www.geeksforgeeks.org/broadcast-receiver-in-android-with-example/
+- Chapter # 9 - Broadcast Recievers https://www.geeksforgeeks.org/broadcast-receiver-in-android-with-example/
 - Chapter # 68 - SQLite Database : https://www.tutorialspoint.com/android/android_sqlite_database.htm
 - Calling REST API : https://www.geeksforgeeks.org/json-parsing-in-android-using-volley-library/
 - Reading QR Code : https://github.com/journeyapps/zxing-android-embedded
