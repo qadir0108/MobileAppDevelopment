@@ -6,6 +6,7 @@ For students to understand Mobile App Development
 ## Course Outline
 - Chapter # 3 - Android Architecture
 - Chapter # 4 - Application Components
+- Chapter # 5 - Hello World!
 - Chapter # 7 - Activities
 - Chapter # 8 - Services
 - Chapter # 9 - Broadcast Recievers
