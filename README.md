@@ -8,7 +8,7 @@ For students to understand Mobile App Development
 - Chapter # 4 - Application Components
 - Chapter # 5 - Hello World!
 - Chapter # 7 - Activities
-- Chapter # 8 - Services
+- Chapter # 8 - Services https://codeunplug.com/android-service-sample-code-for-playing-default-ringtone/
 - Chapter # 9 - Broadcast Recievers
 - Database Example : https://www.tutorialspoint.com/android/android_sqlite_database.htm
 - Calling REST API : https://www.geeksforgeeks.org/json-parsing-in-android-using-volley-library/
