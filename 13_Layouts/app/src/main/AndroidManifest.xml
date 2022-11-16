@@ -30,6 +30,8 @@
         <activity android:name=".TableLayoutActivity" />
         <activity android:name=".AbsoluteLayoutActivity" />
         <activity android:name=".FrameLayoutActivity" />
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".GridViewActivity" />
     </application>
 
 </manifest>

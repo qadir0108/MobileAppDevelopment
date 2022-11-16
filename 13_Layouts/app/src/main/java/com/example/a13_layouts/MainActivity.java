@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i = new Intent(getApplicationContext(), FrameLayoutActivity.class);
                 break;
             case R.id.btnListView:
-                i = new Intent(getApplicationContext(), LinearLayoutActivity.class);
+                i = new Intent(getApplicationContext(), ListViewActivity.class);
                 break;
             case R.id.btnGridView:
-                i = new Intent(getApplicationContext(), LinearLayoutActivity.class);
+                i = new Intent(getApplicationContext(), GridViewActivity.class);
                 break;
         }
         startActivity(i);
