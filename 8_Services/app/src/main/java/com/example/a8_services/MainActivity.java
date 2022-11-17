@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     Button btnStartService;
     Button btnStopService;
@@ -17,21 +17,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = new Intent(this, MyService.class);
+
         btnStartService = (Button)findViewById(R.id.btnStartService);
+        btnStartService.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startService(intent);
+            }
+        });
+
         btnStopService = (Button)findViewById(R.id.btnStopService);
-
-        btnStartService.setOnClickListener(this);
-        btnStopService.setOnClickListener(this);
-    }
-
-    public void onClick(View view) {
-        if (view == btnStartService) {
-            Intent intent = new Intent(this, MyService.class);
-            startService(intent);
-        }
-        if (view == btnStopService) {
-            Intent intent = new Intent(this, MyService.class);
-            stopService(intent);
-        }
+        btnStopService.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                stopService(intent);
+            }
+        });
     }
 }
