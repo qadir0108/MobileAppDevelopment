@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <Button android:id="@+id/btnTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Text View Example"/>
+    <Button android:id="@+id/btnEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Text Example" />
+    <Button android:id="@+id/btnCheckBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Checkbox Example" />
+    <Button android:id="@+id/btnRadioButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Radio Button Example" />
+    <Button android:id="@+id/btnSwitch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch Example" />
+
+    <ImageButton
+        android:layout_marginTop="50dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:src="@drawable/bird1"
+        android:scaleType="centerCrop"
+        />
+</LinearLayout>
