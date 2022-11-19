@@ -19,6 +19,9 @@ https://developer.android.com/guide
 - Chapter # 13 - UI Layouts
 - Chapter # 14 - UI Controls : Radio Buttons https://github.com/TahirAbbas876/Quiz-using-RadioButton
 - Chapter # 15 - Event Handling
+- Chapter # 19 - Notifications https://www.tutorialspoint.com/how-to-create-a-notification-with-notificationcompat-builder-in-android
+- Chapter # 25 - Alert Dialoges
+- Chapter # 45 - JSON Parsing
 - Calling REST API : https://www.geeksforgeeks.org/json-parsing-in-android-using-volley-library/
 - Reading QR Code : https://github.com/journeyapps/zxing-android-embedded
 
