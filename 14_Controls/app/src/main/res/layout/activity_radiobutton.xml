@@ -15,18 +15,19 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         >
         <RadioGroup
             android:id="@+id/rdoGroupGender"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/rdoMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Male"/>
+                android:text="Male"
+                />
             <RadioButton
                 android:id="@+id/rdoFemale"
                 android:layout_width="wrap_content"
