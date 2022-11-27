@@ -22,6 +22,7 @@ https://developer.android.com/guide
 - Chapter # 19 - Notifications https://www.tutorialspoint.com/how-to-create-a-notification-with-notificationcompat-builder-in-android
 - Chapter # 25 - Alert Dialoges https://www.tutorialspoint.com/android/android_alert_dialoges.htm
 - Chapter # 45 - Calling API and JSON Parsing https://www.geeksforgeeks.org/json-parsing-in-android-using-volley-library/
+- ListView and ArrayAdapter https://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView
 - Reading QR Code : https://github.com/journeyapps/zxing-android-embedded
 
 ## Web API
