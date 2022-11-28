@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="BZU Attendance System"
+        android:layout_margin="20dp"
+        android:textAllCaps="true"
+        android:fontFamily="sans-serif"
+        android:textColor="#f00"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        >
+    </TextView>
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="30dp"
+        >
+        <TableRow>
+            <TextView
+                android:text="User Name: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00f"
+                android:textSize="14sp"
+                android:layout_column="0" />
+
+            <EditText
+                android:id="@+id/tvUsername"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="LDBTT-1923-01"
+                android:layout_column="1" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Password: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#00f"
+                android:textSize="14sp"
+                android:layout_column="0" />
+            <EditText
+                android:id="@+id/tvPassword"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="pass123"
+                android:layout_column="1"
+                />
+        </TableRow>
+    </TableLayout>
+    <Button android:id="@+id/btnLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Login" />
+
+</LinearLayout>
