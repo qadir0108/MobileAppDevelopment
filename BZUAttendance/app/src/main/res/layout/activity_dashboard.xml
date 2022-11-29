@@ -1,15 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
-    <Button android:id="@+id/btnStartService"
+    android:orientation="vertical"
+    tools:context=".DashboardActivity">
+
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Start Service"
-        android:onClick="startService"/>
-    <Button android:id="@+id/btnStopService"
+        android:text="BZU Attendance System"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/txtName"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Stop Service"
-        android:onClick="stopService" />
+        android:gravity="center"
+        />
+
 </LinearLayout>

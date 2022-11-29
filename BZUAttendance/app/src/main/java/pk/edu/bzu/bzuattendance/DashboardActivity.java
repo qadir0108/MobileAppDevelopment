@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,17 +16,10 @@ public class DashboardActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        Log.d(TAG, "The onCreate() event");
-    }
 
-    public void startService(View view) {
-        Intent intent = new Intent(this, MyService.class);
-        startService(intent);
+        String Name = getIntent().getStringExtra("Name");
 
-    }
-
-    public void stopService(View view) {
-        Intent intent = new Intent(this, MyService.class);
-        stopService(intent);
+        TextView txtName = (TextView) findViewById(R.id.txtName);
+        txtName.setText("Welcome " + Name);
     }
 }
