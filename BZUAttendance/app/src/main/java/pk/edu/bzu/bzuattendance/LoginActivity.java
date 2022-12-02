@@ -24,16 +24,20 @@ import org.json.JSONObject;
 public class LoginActivity extends AppCompatActivity {
 
     ProgressBar pbLoading;
+    EditText tvUsername;
+    EditText tvPassword;
+    Button btnLogin;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        EditText tvUsername = (EditText)findViewById(R.id.tvUsername);
-        EditText tvPassword = (EditText)findViewById(R.id.tvPassword);
         pbLoading = (ProgressBar)findViewById(R.id.pbLoading);
+        tvUsername = (EditText)findViewById(R.id.tvUsername);
+        tvPassword = (EditText)findViewById(R.id.tvPassword);
 
-        Button btnLogin = (Button)findViewById(R.id.btnLogin);
+        btnLogin = (Button)findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 pbLoading.setVisibility(View.VISIBLE);
@@ -56,7 +60,6 @@ public class LoginActivity extends AppCompatActivity {
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, request, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-
                 pbLoading.setVisibility(View.INVISIBLE);
                 try {
                     boolean Success = response.getBoolean("Success");
@@ -77,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                pbLoading.setVisibility(View.INVISIBLE);
                 Toast.makeText(LoginActivity.this, "Volley Error: "+ error.toString(), Toast.LENGTH_SHORT).show();
             }
         });
