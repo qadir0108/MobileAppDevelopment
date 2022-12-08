@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText tvUsername;
     EditText tvPassword;
     Button btnLogin;
+    Button btnSignup;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,15 +45,22 @@ public class LoginActivity extends AppCompatActivity {
                 ProcessLogin(tvUsername.getText().toString(), tvPassword.getText().toString());
             }
         });
+        btnSignup = (Button)findViewById(R.id.btnSignup);
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                 Intent i = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     public void ProcessLogin(String Username, String Password) {
         RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-        String url = "http://10.0.2.2/students/login";
+        String url = "https://attendance-app-backend.vercel.app/student/login";
         JSONObject request = new JSONObject();
         try {
-            request.put("RollNumber", Username);
-            request.put("Password", Password);
+            request.put("rollnumber", Username);
+            request.put("password", Password);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -62,9 +70,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 pbLoading.setVisibility(View.INVISIBLE);
                 try {
-                    boolean Success = response.getBoolean("Success");
+                    boolean Success = response.getBoolean("status");
                     if(Success) {
-                        String Name = response.getString("Name");
+                        String Name = response.getString("fullName");
                         Intent i = new Intent(getApplicationContext(), DashboardActivity.class);
                         i.putExtra("Name", Name);
                         startActivity(i);

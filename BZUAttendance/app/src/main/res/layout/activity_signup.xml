@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/ic_launcher" />
+    android:orientation="vertical"
+    tools:context=".SignupActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -17,7 +13,7 @@
         android:layout_margin="20dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="BZU Attendance System"
+        android:text="Register Here"
         android:textAllCaps="true"
         android:textColor="#f00"
         android:textSize="32sp"
@@ -26,7 +22,7 @@
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="29dp"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:visibility="invisible" />
@@ -44,19 +40,71 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
+                android:text="Full Name: "
+                android:textColor="#00f"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/tvFullname"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="M Junaid"
+                android:textAllCaps="true" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
                 android:text="Roll No: "
                 android:textColor="#00f"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/tvUsername"
+                android:id="@+id/tvRollno"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:text="LDBTT-1951"
-                android:textAllCaps="true" />
+                android:hint="LDBTT-19-51" />
         </TableRow>
+        <TableRow>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Email: "
+                android:textColor="#00f"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/tvEmail"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:hint="test@abc.com"
+                />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:text="Session: "
+                android:textColor="#00f"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/tvSession"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="1923"
+                android:inputType="number"/>
+        </TableRow>
         <TableRow>
 
             <TextView
@@ -73,27 +121,17 @@
                 android:layout_height="wrap_content"
                 android:layout_column="1"
                 android:inputType="textPassword"
-                android:text="ABCtest" />
+                android:hint="New Password"/>
         </TableRow>
     </TableLayout>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignup"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:text="Login" />
+        android:text="Sign Up" />
 
-    <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="303dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="25dp"
-        android:text="Don't have account?"
-        android:textAlignment="center"
-        android:textColor="#197"
-        android:textSize="14sp"
-        android:background="@android:color/transparent"/>
+
 </LinearLayout>
