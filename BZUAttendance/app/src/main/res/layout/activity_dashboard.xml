@@ -21,4 +21,9 @@
         android:gravity="center"
         />
 
+    <ListView
+        android:id="@+id/lvAttendanceHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </LinearLayout>

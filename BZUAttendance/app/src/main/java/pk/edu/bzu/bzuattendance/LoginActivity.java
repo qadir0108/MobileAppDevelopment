@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,15 +48,15 @@ public class LoginActivity extends AppCompatActivity {
     public void ProcessLogin(String Username, String Password) {
         RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
         String url = "http://10.0.2.2/students/login";
-        JSONObject request = new JSONObject();
+        JSONObject requestBody = new JSONObject();
         try {
-            request.put("RollNumber", Username);
-            request.put("Password", Password);
+            requestBody.put("RollNumber", Username);
+            requestBody.put("Password", Password);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, request, new Response.Listener<JSONObject>() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, requestBody, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 pbLoading.setVisibility(View.INVISIBLE);
@@ -85,6 +84,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        queue.add(jsonObjectRequest);
+        queue.add(request);
     }
 }
