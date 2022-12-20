@@ -62,11 +62,11 @@ public class SignupActivity extends AppCompatActivity {
         String url = "https://attendance-app-backend.vercel.app/student/register";
         JSONObject request = new JSONObject();
         try {
-            request.put("fullName", Fullname);
-            request.put("rollNumber", Rollno);
-            request.put("session", Session);
-            request.put("email", Email);
-            request.put("password",Password);
+            request.put("Name", Fullname);
+            request.put("RollNumber", Rollno);
+            request.put("Session", Session);
+            request.put("Email", Email);
+            request.put("Password",Password);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -77,21 +77,21 @@ public class SignupActivity extends AppCompatActivity {
                 pbLoading.setVisibility(View.INVISIBLE);
                 try {
 
-                    boolean Success = response.getBoolean("status");
+                    boolean Success = response.getBoolean("Success");
                     if(Success) {
                         Toast.makeText(SignupActivity.this, "New user is successfully registered!", Toast.LENGTH_SHORT).show();
-                        String Name = response.getString("fullName");
+                        String Name = response.getString("Name");
                         Intent i = new Intent(getApplicationContext(), DashboardActivity.class);
                         i.putExtra("Name", Name);
                         startActivity(i);
                     }
                     else {
-                        boolean Unique = response.getBoolean("uniqueErr");
+                        boolean Unique = response.getBoolean("RollNumberError");
                         if(Unique){
                             Toast.makeText(SignupActivity.this, "This Roll Number is already registered!", Toast.LENGTH_SHORT).show();
                         }
 //                        String ErrorMessage = response.getString("ErrorMessage");
-                        Toast.makeText(SignupActivity.this, "Enter correct email!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SignupActivity.this, "Enter correct data including Email!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

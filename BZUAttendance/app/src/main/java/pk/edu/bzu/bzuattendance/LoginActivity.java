@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 pbLoading.setVisibility(View.VISIBLE);
-                ProcessLogin(tvUsername.getText().toString(), tvPassword.getText().toString());
+                ProcessLogin(tvUsername.getText().toString().trim(), tvPassword.getText().toString().trim());
             }
         });
         btnSignup = (Button)findViewById(R.id.btnSignup);
@@ -55,11 +55,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void ProcessLogin(String Username, String Password) {
         RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-        String url = "http://10.0.2.2/students/login";
-        JSONObject request = new JSONObject();
+        String url = "https://attendance-app-backend.vercel.app/student/login";
+        JSONObject requestBody = new JSONObject();
         try {
-            request.put("RollNumber", Username);
-            request.put("Password", Password);
+            requestBody.put("RollNumber", Username);
+            requestBody.put("Password", Password);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -69,16 +69,17 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 pbLoading.setVisibility(View.INVISIBLE);
                 try {
-                    boolean Success = response.getBoolean("status");
+                    boolean Success = response.getBoolean("Success");
                     if(Success) {
-                        String Name = response.getString("fullName");
+                        String Name = response.getString("Name");
                         Intent i = new Intent(getApplicationContext(), DashboardActivity.class);
                         i.putExtra("Name", Name);
+                        i.putExtra("RollNumber", Username);
                         startActivity(i);
                     }
                     else {
                         String ErrorMessage = response.getString("ErrorMessage");
-                        Toast.makeText(LoginActivity.this, "Server Error: "+ ErrorMessage, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Login Error: "+ ErrorMessage, Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

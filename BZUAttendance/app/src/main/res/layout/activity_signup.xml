@@ -49,7 +49,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:hint="M Junaid"
+                android:hint="Your Name"
                 android:textAllCaps="true" />
         </TableRow>
 
@@ -68,7 +68,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:hint="LDBTT-19-51" />
+                android:hint="LDBTT-00-00" />
         </TableRow>
         <TableRow>
 
@@ -85,7 +85,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:hint="test@abc.com"
+                android:hint="Test@abc.com"
                 />
         </TableRow>
         <TableRow>
