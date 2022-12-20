@@ -34,7 +34,7 @@ public class AttendanceHistoryAdapter extends ArrayAdapter<AttendanceHistory> {
         TextView tvStatus = (TextView) convertView.findViewById(R.id.tvStatus);
 
         // Populate the data into the template view using the data object
-        tvDate.setText(history.getDate());
+        tvDate.setText(history.getDate().substring(0, history.getDate().length() - 8));
         tvTimeslot.setText(history.getTimeSlot());
         tvSubjectCode.setText(history.getSubjectCode());
         tvSubject.setText(history.getSubject());

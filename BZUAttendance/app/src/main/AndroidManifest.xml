@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="pk.edu.bzu.bzuattendance">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.BZUAttendance"
-        tools:targetApi="31"
         android:usesCleartextTraffic="true"
-        >
+        tools:targetApi="31">
+        <activity
+            android:name=".TimetableActivity"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
@@ -27,6 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DashboardActivity" />
+        <activity android:name=".SignupActivity" />
     </application>
 
 </manifest>

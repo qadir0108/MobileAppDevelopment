@@ -1,8 +1,12 @@
 package pk.edu.bzu.bzuattendance;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,27 +26,39 @@ import java.util.ArrayList;
 public class DashboardActivity extends AppCompatActivity {
 
     private static final String TAG = "qadir";
-
+    String RollNumber;
+    Button btnTimetable;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
+        RollNumber = getIntent().getStringExtra("RollNumber");
         String Name = getIntent().getStringExtra("Name");
         TextView txtName = (TextView) findViewById(R.id.txtName);
         txtName.setText("Welcome " + Name);
-
+        btnTimetable = (Button)findViewById(R.id.btnTimetable);
+        btnTimetable.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), TimetableActivity.class);
+                i.putExtra("RollNumber", RollNumber);
+                startActivity(i);
+            }
+        });
         getLoadAttendanceHistory();
     }
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getLoadAttendanceHistory();
+    }
     // This function gets data from API and loads data into list view
     public  void getLoadAttendanceHistory()
     {
         RequestQueue queue = Volley.newRequestQueue(DashboardActivity.this);
-        String url = "http://10.0.2.2/attendance/history";
+        String url = "https://attendance-app-backend.vercel.app/attendance/history";
         JSONObject requestBody = new JSONObject();
         try {
-            requestBody.put("RollNumber", "LDBTT-1923-01");
+            requestBody.put("RollNumber", RollNumber);
         } catch (JSONException e) {
             e.printStackTrace();
         }
