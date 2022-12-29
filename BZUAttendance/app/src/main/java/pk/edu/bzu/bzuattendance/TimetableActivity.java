@@ -263,7 +263,24 @@ public class TimetableActivity extends AppCompatActivity implements View.OnClick
 
                                     if (locationResult != null && locationResult.getLocations().size() >0){
 
+
                                         int index = locationResult.getLocations().size() - 1;
+                                        boolean isMockLocation = locationResult.getLocations().get(index).isFromMockProvider();
+                                        if (isMockLocation){
+                                            pbLoading.setVisibility(View.INVISIBLE);
+                                            builder = new AlertDialog.Builder(TimetableActivity.this);
+                                            builder.setTitle("Mock Location!")
+                                                    .setMessage("You are using mock location! Turn it off to move further!")
+                                                    .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                                                        }
+                                                    })
+                                                    .setCancelable(true)
+                                                    .show();
+                                        }
+                                        else{
                                         double latitude = locationResult.getLocations().get(index).getLatitude();
                                         double longitude = locationResult.getLocations().get(index).getLongitude();
                                         //Toast.makeText(TimetableActivity.this,"Latitude: "+ latitude + "\n" + "Longitude: "+ longitude, Toast.LENGTH_SHORT).show();
@@ -290,6 +307,7 @@ public class TimetableActivity extends AppCompatActivity implements View.OnClick
                                                     .setCancelable(true)
                                                     .show();
                                         }
+                                    }
                                     }
                                 }
                             }, Looper.getMainLooper());
