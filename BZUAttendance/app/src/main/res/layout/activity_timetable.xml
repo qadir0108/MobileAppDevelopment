@@ -7,13 +7,29 @@
     android:orientation="vertical"
     tools:context=".TimetableActivity">
 
-    <Button
-        android:id="@+id/btnMarkattendance"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="15dp"
-        android:text="Mark Attendance" />
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp">
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="70dp"/>
+
+        <Button
+            android:id="@+id/btnMarkattendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Mark Attendance" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
