@@ -3,6 +3,12 @@
 # MobileAppDevelopment
 For students to understand Mobile App Development
 
+## Java
+- Download JDK from https://www.oracle.com/pk/java/technologies/downloads/
+- Set PATH in Windows Environment Variable
+- HelloWorld Program https://www.baeldung.com/java-could-not-find-load-main-class
+- 10 Best Java IDEs and Editors in 2023 https://www.turing.com/blog/best-java-ides-and-editors/
+
 ## Android Developer Guide
 https://developer.android.com/guide
 
